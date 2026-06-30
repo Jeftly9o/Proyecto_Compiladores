@@ -4,20 +4,16 @@
 #include <cctype>
 using namespace std;
 
-// =========================================================================
-// 1. NUEVO STRUCT: Guarda la cadena dividida en tokens mediante punteros
-// =========================================================================
+// Guarda la cadena dividida en tokens mediante punteros
 struct NodoToken {
     string valor;
-    NodoToken* sig; // Puntero al siguiente elemento de la cadena
-    NodoToken* ant; // Puntero al elemento anterior
+    NodoToken* sig; 
+    NodoToken* ant; 
 
     NodoToken(string v) : valor(v), sig(nullptr), ant(nullptr) {}
 };
 
-// =========================================================================
-// 2. STRUCT ORIGINAL: Guarda el historial de derivaciones
-// =========================================================================
+//  Guarda el historial de derivaciones
 struct NodoDerivacion {
     string derivacion;
     string estado_actual;
